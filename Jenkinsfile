@@ -17,10 +17,13 @@ pipeline {
                 bat label: '', script: ' mvn test'
             }
         }
+stage('Deploy - Production') {
       stage('Deploy') {
     steps {
-       bat label: '', script: 'git push'
+        sh './deploy production'
+        bat label: '', script: ' mvn deploy'
     }
 }
+    }
     }
 }
