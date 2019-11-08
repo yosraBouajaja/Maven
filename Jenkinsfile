@@ -19,7 +19,7 @@ pipeline {
         }
       stage('Deploy') {
     steps {
-        bat label: '', script: ' mvn deploy'
+       bat label: '', script: 'git push'
     }
 }
     }
