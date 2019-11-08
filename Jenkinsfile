@@ -22,8 +22,4 @@ stage('Deploy - Production') {
     steps {
         sh './deploy production'
         bat label: '', script: ' mvn deploy'
-    }
-}
-    }
-    }
-
+    }}}}
