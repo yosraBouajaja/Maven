@@ -17,9 +17,9 @@ pipeline {
                 bat label: '', script: ' mvn test'
             }
         }
-      stage('Deploy - Production') {
+      stage('Deploy') {
     steps {
-        sh './deploy production'
+        bat label: '', script: ' mvn deploy'
     }
 }
     }
