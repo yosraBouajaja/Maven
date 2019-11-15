@@ -21,6 +21,16 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "nexusId"
     }
     stages {
+            
+             stage('Email Notification') {
+          steps {
+                  mail bcc: '', body: '''Hi Yosra ,
+Welcome to jenkins email alerts .
+Thanks 😗''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification', to: 'yosrabouj2020@gmail.com'
+          }
+      
+        }
+            
         stage('Checkout') {
             steps {
                git 'https://github.com/yosraBouajaja/Maven.git'
@@ -77,6 +87,8 @@ pipeline {
                     }
                 }
             }
+                
+               
         }
     }
     
