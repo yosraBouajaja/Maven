@@ -24,7 +24,7 @@ pipeline {
             
              stage('Email Notification') {
           steps {
-                  mail bcc: '', body: '''Hi Yosra ,
+                  mail bcc: '', body: '''3aslemaaa ,
 Welcome to jenkins email alerts .
 Thanks 😗''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification', to: 'yosrabouj2020@gmail.com'
           }
