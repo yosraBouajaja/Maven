@@ -22,14 +22,7 @@ pipeline {
     }
     stages {
             
-             stage('Email Notification') {
-          steps {
-                  mail bcc: '', body: '''Marahbee marahbe ,
-Welcome to jenkins email alerts .
-Thanks 😗''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification Getit please', to: 'yosrabouj2020@gmail.com'
-          }
-      
-        }
+          
             
         stage('Checkout') {
             steps {
@@ -89,6 +82,16 @@ Thanks 😗''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification Ge
             }
                 
                
+        }
+            
+               stage('Email Notification') {
+          steps {
+                  mail bcc: '', body: '''Welcome to jenkins email alerts ,
+                  Checkout .. Success/Build .. Success/Test .. Success/Publish to nexus .. Success .
+.
+Thanks ''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification Getit please', to: 'yosrabouj2020@gmail.com'
+          }
+      
         }
     }
     
