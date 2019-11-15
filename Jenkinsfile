@@ -89,7 +89,7 @@ pipeline {
                   mail bcc: '', body: ''' Welcome to jenkins email alerts ,
                   Checkout .. Success/Build .. Success/Test .. Success/Publish to nexus .. Success .
 .
-Thank You ''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification ', to: 'yosrabouj2020@gmail.com'
+Thanks ''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification ', to: 'yosrabouj2020@gmail.com'
           }
       
         }
