@@ -34,7 +34,7 @@ pipeline {
                bat label: '', script: ' mvn install'
             }
         }
-        stage('Test') {
+        stage('Test Test') {
             steps {
                 bat label: '', script: ' mvn test'
             }
