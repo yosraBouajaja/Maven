@@ -85,12 +85,11 @@ pipeline {
         }
             
                stage('Email Notification') {
-          steps {
-                  mail bcc: '', body: ''' Welcome to jenkins email alerts ,
-                  Checkout .. Success/Build .. Success/Test .. Success/Publish to nexus .. Success .
-.
-Thank You ''', cc: '', from: '', replyTo: '', subject: 'Jenkins notification ', to: 'yosrabouj2020@gmail.com'
-          }
+           steps {
+                  mail bcc: '',  body: '''Hi Yosra ,
+Welcome to  '''+  env.JOB_NAME + ''' email alerts .
+Thanks for this amazing work   Checkout .. Success/Build .. Success/Test .. Success/Publish to nexus .. Success ''', cc: '', from: '', replyTo: '',subject:currentBuild.currentResult + " : " + env.JOB_NAME, to:  'yosrabouj2020@gmail.com'
+       }
       
         }
     }
